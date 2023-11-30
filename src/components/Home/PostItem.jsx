@@ -117,8 +117,14 @@ const PostItem = ({ _id, caption, likes, comments, experyday,experytime,madeday,
                 <div className="flex flex-auto items-center space-x-1">
                     <Link to={`/${postedBy.username}`} className="text-sm font-semibold hover:underline">{postedBy.username}</Link>
                     <span className="text-sm">{caption}</span>
+                    
                 </div>
-
+                {madeday&&experyday&&
+                <div>
+                    <div >Made Day & Time : {madeday} {madetime}</div>
+                    <div >Expiry Day & Time : {experyday} {experytime}</div>
+                </div>
+}
                 {/* time */}
                 {allComments.length > 0 ?
 
